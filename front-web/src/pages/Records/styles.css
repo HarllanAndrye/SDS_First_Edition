@@ -12,6 +12,7 @@
   .records-table {
     width: 100%;
     border-bottom: 10px solid var(--color-turquoise);
+    /* top-left | top-right | bottom-right | bottom-left */
     border-radius: 0 0 10px 10px;
   }
   
