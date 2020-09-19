@@ -7,7 +7,8 @@ import Filters from '../../components/Filters';
 import './styles.css';
 
 
-const BASE_URL = "http://localhost:8080";
+//const BASE_URL = "http://localhost:8080";
+const BASE_URL = "https://sds1-harllan.herokuapp.com";
 
 /**
  * {recordsReponse?.content}
