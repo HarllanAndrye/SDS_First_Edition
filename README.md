@@ -6,5 +6,5 @@ Projeto consiste em uma aplicação (web e mobile) de pesquisa de preferência d
 Os dados da pesquisa são coletados no App Mobile e mostrados na aplicação Web.
 
 Tela inicial da aplicação Web:
-[![Image](https://drive.google.com/file/d/1VPDOxqPKtw2EKw1nZCOg6wAax6Ky4dNN/view?usp=sharing "Tela inicial")]
+[![Image](https://drive.google.com/file/d/1VPDOxqPKtw2EKw1nZCOg6wAax6Ky4dNN/view?usp=sharing "Tela inicial")](https://drive.google.com/file/d/1VPDOxqPKtw2EKw1nZCOg6wAax6Ky4dNN/view?usp=sharing)
 

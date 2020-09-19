@@ -1,13 +1,25 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+// Container que não tem aparência, usado para clicar em determinada parte da tela no qual ele é colocado
+import { TouchableNativeFeedback } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 const Header = () => {
+
+  const navigation = useNavigation();
+
+  const handleOnPress = () => {
+    navigation.navigate('Home'); // Home é o name da rota criada em "routes.tsx".
+  };
+
     return (
+      <TouchableNativeFeedback onPress={handleOnPress}>
         <View style={styles.header}>
             <Image source={require('../../assets/logo.png')} />
             <Text style={styles.textLogo1}>Big Game</Text>
             <Text style={styles.textLogo2}>Survey</Text>
         </View>
+      </TouchableNativeFeedback>
     );
 };
 

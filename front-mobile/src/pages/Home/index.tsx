@@ -2,6 +2,8 @@ import React from 'react';
 import { FontAwesome5 as Icon } from '@expo/vector-icons'; // pacote de icones
 import { StyleSheet, Text, View, Image, Alert } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler'; // Criar o botão
+import Header from '../../components/Header';
+import { useNavigation } from '@react-navigation/native';
 
 /**
  * <> e </>: (fragmento) é utilizado quando quer colocar duas View no mesmo return, por exemplo.
@@ -9,31 +11,34 @@ import { RectButton } from 'react-native-gesture-handler'; // Criar o botão
 
 const Home = () => {
 
-    const handleOnPress = () => {
-        Alert.alert("Você clicou no botão! Tudo certo.");
-    };
+  const navigation = useNavigation();
 
-    return (
-        <>
-            <View style={styles.container}>
-                <Image style={styles.gamerImage} source={require('../../assets/gamer.png')} />
-                <Text style={styles.title}>Vote agora!</Text>
-                <Text style={styles.subTitle}>Nos diga qual é seu jogo favorito!</Text>
-            </View>
-            <View style={styles.footer}>
-                <RectButton style={styles.button} onPress={handleOnPress}>
-                    <Text style={styles.buttonText}>
-                        COLETAR DADOS
+  const handleOnPress = () => {
+    navigation.navigate('CreateRecord'); // CreateRecord é o name da rota criada em "routes.tsx".
+  };
+
+  return (
+      <>
+        <Header />
+        <View style={styles.container}>
+            <Image style={styles.gamerImage} source={require('../../assets/gamer.png')} />
+            <Text style={styles.title}>Vote agora!</Text>
+            <Text style={styles.subTitle}>Nos diga qual é seu jogo favorito!</Text>
+        </View>
+        <View style={styles.footer}>
+            <RectButton style={styles.button} onPress={handleOnPress}>
+                <Text style={styles.buttonText}>
+                    COLETAR DADOS
+                </Text>
+                <View style={styles.buttonIcon}>
+                    <Text>
+                        <Icon name="chevron-right" color="#FFF" size={25} />
                     </Text>
-                    <View style={styles.buttonIcon}>
-                        <Text>
-                            <Icon name="chevron-right" color="#FFF" size={25} />
-                        </Text>
-                    </View>
-                </RectButton>
-            </View>
-        </>
-    );
+                </View>
+            </RectButton>
+        </View>
+      </>
+  );
 };
 
 const styles = StyleSheet.create({
